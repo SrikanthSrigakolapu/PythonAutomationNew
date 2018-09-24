@@ -1,6 +1,8 @@
 from selenium import webdriver
 import os
 from selenium.webdriver.common.keys import Keys
+
+//below is the one for getting the current directory
 parentdir=os.path.dirname(os.path.abspath(__file__))
 
 print(os.path.dirname(parentdir)+"\WindowsDrivers\chromedriver.exe")
