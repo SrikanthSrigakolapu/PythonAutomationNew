@@ -15,7 +15,7 @@ class SingleInputField(unittest.TestCase):
     def test_OpenSingleFormDemo(self):
         chromedriver=self.chromeDriver
         chromedriver.get("https://seleniumeasy.com/test/")
-        #self.assertEqual("Selenium Easy"chromedriver.title)
+        #self.assertEqual("Selenium Easy."chromedriver.title)
 
         #TODO: right now I am using print statements need to look for logging option in python
         print("Success: Opened the url in chrome")
@@ -23,12 +23,12 @@ class SingleInputField(unittest.TestCase):
         inputFromsElem=chromedriver.find_element_by_xpath("//a[normalize-space()=\"Input Forms\"]/b[@class=\"caret\"]")
         inputFromsElem.click()
 
-        chromedriver.save_screenshot("InputFormsClick.png")
+        chromedriver.save_screenshot("snapshots/SC1_SingleInputField/InputFormsClick.png")
         print("SuccessFully clicked the InputFormsClick")
 
         SFDelem=chromedriver.find_element_by_xpath("//ul[@class=\"dropdown-menu\"]/li/a[text()=\"Simple Form Demo\"]")
         SFDelem.click()
-        chromedriver.save_screenshot("SimpleFormDemoPage.png")
+        chromedriver.save_screenshot("snapshots/SC1_SingleInputField/SimpleFormDemoPage.png")
 
         print("entered the Simple Form Demo page")
 
@@ -39,7 +39,7 @@ class SingleInputField(unittest.TestCase):
 
         showMessageButton=chromedriver.find_element_by_xpath("//button[text()=\"Show Message\"]")
         showMessageButton.click()
-        chromedriver.save_screenshot("ShowMessage.png")
+        chromedriver.save_screenshot("snapshots/SC1_SingleInputField/ShowMessage.png")
 
 
     def tearDown(self):
