@@ -1,0 +1,11 @@
+1.Xpath based on text value
+	Example:
+		<a href:"#">sample</a>
+
+		Xpath is : //a[text()="sample"]
+
+2.Xpath for text value which contains spaces
+	Example:
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Input Forms
+					  </a>
+		Xpath is : //a[normalize-space()="Input Forms"]
