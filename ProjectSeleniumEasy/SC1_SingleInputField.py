@@ -9,7 +9,7 @@ class SingleInputField(unittest.TestCase):
     def setUp(self):
         #initiate the Chrome instance
         parentpath=os.path.dirname(os.path.abspath(__file__))
-        self.chromeDriver=webdriver.Chrome(executable_path=os.path.dirname(parentpath)+"\WindowsDrivers\chromedriver.exe")
+        self.chromeDriver=webdriver.Chrome(executable_path=os.path.dirname(parentpath)+"/LinuxDrivers/chromedriver")
         self.chromeDriver.maximize_window()
 
     def test_OpenSingleFormDemo(self):
@@ -40,6 +40,7 @@ class SingleInputField(unittest.TestCase):
         showMessageButton=chromedriver.find_element_by_xpath("//button[text()=\"Show Message\"]")
         showMessageButton.click()
         chromedriver.save_screenshot("snapshots/SC1_SingleInputField/ShowMessage.png")
+        time.sleep(10)
 
 
     def tearDown(self):
