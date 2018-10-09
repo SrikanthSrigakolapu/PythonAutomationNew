@@ -8,7 +8,8 @@ class TwoInputForm(unittest.TestCase):
     def setUp(self):
         #initiate the Chrome instance
         parentpath=os.path.dirname(os.path.abspath(__file__))
-        self.chromeDriver=webdriver.Chrome(executable_path=os.path.dirname(parentpath)+"/LinuxDrivers/chromedriver")
+        #self.chromeDriver=webdriver.Chrome(executable_path=os.path.dirname(parentpath)+"/LinuxDrivers/chromedriver")
+        self.chromeDriver = webdriver.Chrome(executable_path=os.path.dirname(parentpath) + "/WindowsDrivers/chromedriver.exe")
         self.chromeDriver.maximize_window()
 
 

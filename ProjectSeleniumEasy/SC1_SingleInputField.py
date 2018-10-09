@@ -3,13 +3,14 @@ import os
 import time
 from selenium import webdriver
 
-
 class SingleInputField(unittest.TestCase):
 
     def setUp(self):
         #initiate the Chrome instance
         parentpath=os.path.dirname(os.path.abspath(__file__))
-        self.chromeDriver=webdriver.Chrome(executable_path=os.path.dirname(parentpath)+"/LinuxDrivers/chromedriver")
+        print(os.name)
+        #self.chromeDriver=webdriver.Chrome(executable_path=os.path.dirname(parentpath)+"/LinuxDrivers/chromedriver")
+        self.chromeDriver = webdriver.Chrome(executable_path=os.path.dirname(parentpath) + "/WindowsDrivers/chromedriver.exe")
         self.chromeDriver.maximize_window()
 
     def test_OpenSingleFormDemo(self):
@@ -32,7 +33,6 @@ class SingleInputField(unittest.TestCase):
 
         print("entered the Simple Form Demo page")
 
-    #def test_EnterSingleInput(self):
         chromedriver=self.chromeDriver
         singleInputFieldElement=chromedriver.find_element_by_xpath("//input[@id=\"user-message\"]")
         singleInputFieldElement.send_keys("Hello this is sentinel")
