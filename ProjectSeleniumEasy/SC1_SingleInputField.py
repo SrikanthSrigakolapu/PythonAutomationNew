@@ -9,8 +9,8 @@ class SingleInputField(unittest.TestCase):
         #initiate the Chrome instance
         parentpath=os.path.dirname(os.path.abspath(__file__))
         print(os.name)
-        #self.chromeDriver=webdriver.Chrome(executable_path=os.path.dirname(parentpath)+"/LinuxDrivers/chromedriver")
-        self.chromeDriver = webdriver.Chrome(executable_path=os.path.dirname(parentpath) + "/WindowsDrivers/chromedriver.exe")
+        self.chromeDriver=webdriver.Chrome(executable_path=os.path.dirname(parentpath)+"/LinuxDrivers/chromedriver")
+        #self.chromeDriver = webdriver.Chrome(executable_path=os.path.dirname(parentpath) + "/WindowsDrivers/chromedriver.exe")
         self.chromeDriver.maximize_window()
 
     def test_OpenSingleFormDemo(self):
