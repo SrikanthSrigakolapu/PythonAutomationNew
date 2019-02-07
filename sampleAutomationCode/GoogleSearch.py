@@ -9,7 +9,7 @@ parentdir=os.path.dirname(os.path.abspath(__file__))
 
 print(os.path.dirname(parentdir)+"\LinuxDrivers\chromedriver.exe")
 #invoking the chrome instance
-driverchrome=webdriver.Chrome(executable_path=os.path.dirname(parentdir)+"\LinuxDrivers\chromedriver.exe")
+driverchrome=webdriver.Chrome(executable_path=os.path.dirname(parentdir)+"\LinuxDrivers\chromedriver")
 
 print("Chrome invoked successfully")
 
