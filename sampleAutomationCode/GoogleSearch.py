@@ -7,9 +7,9 @@ from selenium.webdriver.common.keys import Keys
 #below is the one for getting the current directory
 parentdir=os.path.dirname(os.path.abspath(__file__))
 
-print(os.path.dirname(parentdir)+"\WindowsDrivers\chromedriver.exe")
+print(os.path.dirname(parentdir)+"\LinuxDrivers\chromedriver.exe")
 #invoking the chrome instance
-driverchrome=webdriver.Chrome(executable_path=os.path.dirname(parentdir)+"\WindowsDrivers\chromedriver.exe")
+driverchrome=webdriver.Chrome(executable_path=os.path.dirname(parentdir)+"\LinuxDrivers\chromedriver.exe")
 
 print("Chrome invoked successfully")
 
